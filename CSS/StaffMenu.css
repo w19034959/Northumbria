@@ -1,0 +1,105 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+#logo {
+  width:100px;
+  height:100px;
+}
+
+#navigation-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  background-image: url(../Images/StaffBackground.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+}
+
+.navigation-bar {
+	background-color: white;
+	height: 105px;
+	width: 100%;
+	text-align:center;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 5px;
+}
+.navigation-bar img{
+	float:left;
+}
+.navigation-bar ul {
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.navigation-bar li {
+	list-style-type: none;
+	padding: 0px;
+	height: 24px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	display: inline;
+}
+
+.navigation-bar li a {
+	color: black;
+	font-size: 22px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	line-height: 100px;
+	padding: 5px 50px;
+	opacity: 1;
+	
+}
+
+.navigation-bar ul li:hover a{ 
+    color:#98AFC7;
+}
+
+.navigation-bar a.active {
+  background-color: #EAAE62;
+  color: white;
+}
+
+.container {
+	position: absolute;
+	left: 0;
+	margin: 20px;
+	max-width: 300px;
+	padding: 16px;
+	background-color: #eee;
+}
+
+h1 {
+	padding: 20px;
+	text-align: center;
+	font-size: 24px; 
+}
+
+h2 {
+	text-align: center;
+	font-size: 20px;
+}
+
+p {
+	font-size: 12px;
+	position: absolute:
+	
+}
