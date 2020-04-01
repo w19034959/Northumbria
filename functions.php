@@ -8,7 +8,7 @@ function getConnection() {
  'unn_w19032995', 'TeamProject2020');
    return $db;
 }
-	
+
 // variable declaration
 $username = "";
 $email    = "";
