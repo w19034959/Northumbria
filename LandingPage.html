@@ -34,6 +34,19 @@
 						<input type="password" placeholder="Enter Password" name="psw" required>
 
 						<button type="submit" class="btn">Login</button>
+						<script>
+						if ("[]@authfield:Management]" == "Management"){
+							window.location = "http://unn-w19034959.newnumyspace.co.uk/ManagerMenu";
+						}
+						else if("[@authfield:Staff]" == "Staff"){
+							window.location = "http://unn-w19034959.newnumyspace.co.uk/StaffMenu";
+						}
+						</script>
+						<label>
+							<input type="checkbox" checked="checked" name="remember">Remember me
+						</label>
+
+							</menu>
 						<p>
 							Not yet a member? <a href="register.php">Sign up</a>
 						</p>
