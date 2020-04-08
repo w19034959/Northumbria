@@ -31,19 +31,20 @@ $db = getConnection();
 
 						<label for="password"><b>Password</b></label>
 						<input type="password" placeholder="Enter Password" name="password" required>
-						
+
 						<label for "role"><b>Role</b></label>
 						<select name = "role"> <option value = "Staff">Staff</option>
 						<option value = "Management">Manager</option><br>
-						</select> 
-					
+						</select>
+
 
 						<button type="submit" class="btn" name="login">Login</button>
-						
-						
-							
-						
+
+
+
+
 					</form>
 				</div>
 		</body>
 </html>
+
