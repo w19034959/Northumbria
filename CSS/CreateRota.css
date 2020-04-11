@@ -1,0 +1,151 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+#logo {
+  width:100px;
+  height:100px;
+}
+
+#navigation-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navigation-bar {
+	background-color: white;
+	height: 105px;
+	width: 100%;
+	text-align:center;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 5px;
+}
+.navigation-bar img{
+	float:left;
+}
+.navigation-bar ul {
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.navigation-bar li {
+	list-style-type: none;
+	padding: 0px;
+	height: 24px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	display: inline;
+}
+
+.navigation-bar li a {
+	color: black;
+	font-size: 22px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	line-height: 100px;
+	padding: 5px 50px;
+	opacity: 1;
+	
+}
+
+.navigation-bar ul li:hover a{ 
+    color:#98AFC7;
+}
+
+.navigation-bar a.active {
+  background-color: #EAAE62;
+  color: white;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+td, th {
+  border: 3px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  background-color: #EAAE62;
+  color: white;
+  text-align: center;
+}
+
+input[type=submit], [type=reset]
+{
+  background-color: #ddd;
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 40%;
+}
+
+input[type=submit]:hover, [type=reset]:hover{
+	background-color: #EAAE62;
+	color: white;
+}
+
+.tabs {
+	background-color: #ddd;
+}
+
+.tablink {
+  background-color: #eee;
+  color: white;
+  float: center;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #EAAE62;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px 8px;
+  font-size: 17px;
+  width: 49.8%;
+  font-weight: bold;
+}
+
+.tablink:hover {
+  background-color: #EAAE62;
+  color: white;
+}
+
+.tablink:active {
+	background-color: #EAAE62;
+	color: white;
+}
+
+
+
+
+
+
+
