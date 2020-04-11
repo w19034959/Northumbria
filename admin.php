@@ -22,7 +22,7 @@ $db = getConnection();
 								<li><a href="logout.php">Log Out</a></li>
 							</ul>
 					</div>
-				</div>
+				
     <form action="action_page.php" style="border:1px solid #ccc">
       <div class="container">
         <h1>Sign Up</h1>
@@ -48,6 +48,7 @@ $db = getConnection();
       <button type="button" class="cancelbtn">Cancel</button>
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
+  </div>
   </div>
 </form>
 		</body>
