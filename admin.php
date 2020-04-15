@@ -14,7 +14,7 @@ $db = getConnection();
 					<div class="navigation-bar">
 							<img id = "logo" img src="Images/logo.jpg">
 							<ul>
-								<li><a href="ManagerMenu.php" class = "active">Home</a></li>
+								<li><a href="ManagerMenu.php">Home</a></li>
 								<li><a href="CreateRota.php" class = "active">Create Rota</a></li>
 								<li><a href="#">Alter Rota</a></li>
 								<li><a href="#">Requests</a></li>
