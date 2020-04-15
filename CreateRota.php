@@ -37,13 +37,14 @@ $db = getConnection();
 					</div>
 					<div id="FrontOfHouse" class="tabcontent">
 					
-					<form action ="insertFOH.php" method = "post">
+					<form onsubmit="return confirm('Are you sure you want to publish this rota? All staff members will be published even if incomplete')" 
+						onreset="return confirm('Are you sure you want to clear this rota? All progress will be deleted')" action ="insertFOH.php" method = "post">
 					<table>
 						<tr>
 							<th colspan="10" id="FoHTitle">Front of House Rota</th>
 						</tr>
 						<tr>
-							<th colspan="6"><label>Please select the week you would like to rota: </label><input type = "date" name="workWeek"></th>
+							<th colspan="6" id="date"><label>Please select the week you would like to rota: </label><input type = "date" name="workWeek"></th>
 							<th colspan="4" id="FoHPublish"><input type="submit" value="Publish"/><input type="reset" value="Clear"/></th>
 						</tr>
 						<tr>
@@ -70,21 +71,21 @@ $db = getConnection();
 						    $id = $row->employee_id;
 
                             echo "<tr><td name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td>";
-                            echo '<td><label>Start </label><input type="time" name="mondayStart'.$id.'"
+                            echo '<td><label>Start &nbsp</label><input type="time" name="mondayStart'.$id.'"
 											><br><label>Finish </label><input type="time" name="mondayEnd'.$id.'"></td>
-										<td><label>Start </label><input type=time name="tuesdayStart'.$id.'"
+										<td><label>Start &nbsp</label><input type=time name="tuesdayStart'.$id.'"
 											><br><label>Finish </label><input type=time name="tuesdayEnd'.$id.'"></td>
-										<td><label>Start </label><input type=time name="wednesdayStart'.$id.'"
+										<td><label>Start &nbsp</label><input type=time name="wednesdayStart'.$id.'"
 										><br><label>Finish </label><input type=time name="wednesdayEnd'.$id.'"></td>
-										<td><label>Start </label><input type=time name="thursdayStart'.$id.'"
+										<td><label>Start &nbsp</label><input type=time name="thursdayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="thursdayEnd'.$id.'"></td>
-										<td><label>Start </label><input type=time name="fridayStart'.$id.'"
+										<td><label>Start &nbsp</label><input type=time name="fridayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="fridayEnd'.$id.'"></td>
-										<td><label>Start </label><input type=time name="saturdayStart'.$id.'"
+										<td><label>Start &nbsp</label><input type=time name="saturdayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="saturdayEnd'.$id.'"></td>
-										<td><label>Start </label><input type=time name="sundayStart'.$id.'"
+										<td><label>Start &nbsp</label><input type=time name="sundayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="sundayEnd'.$id.'"></td>
-											<td><label>Holiday</label><input type=checkbox name="isHoliday'.$id.'"></td></tr>';
+											<td><label>Holiday</label><input type=checkbox name="isHoliday'.$id.'" value=1></td></tr>';
                             $value = $value + 1; //increase the value for each row returned
                         }
 						?>
@@ -96,15 +97,18 @@ $db = getConnection();
 				
 					
 					<div id="Kitchen" class="tabcontent">
-					<form action ="insertKitchen.php" method = "post">
-					<input type = "date" name="workWeek">
+					<form onsubmit="return confirm('Are you sure you want to publish this rota? All staff members will be published even if incomplete')" 
+						onreset="return confirm('Are you sure you want to clear this rota? All progress will be deleted')" action ="insertKitchen.php" method = "post">
 					<table>
 						<tr>
-							<th colspan="11">Kitchen Rota</th>
+							<th colspan="10" id="KitchenTitle">Kitchen Rota</th>
 						</tr>
 						<tr>
-							<th colspan="2"> Name </th>
-							<th> ID </th>
+							<th colspan="6" id="date"><label>Please select the week you would like to rota: </label><input type = "date" name="workWeek"></th>
+							<th colspan="4" id="FoHPublish"><input type="submit" value="Publish"/><input type="reset" value="Clear"/></th>
+						</tr>
+						<tr>
+							<th> Name </th>
 							<th> Monday </th>
 							<th> Tuesday </th>
 							<th> Wednesday </th>
@@ -126,7 +130,7 @@ $db = getConnection();
 
 						    $id = $row->employee_id;
 
-                            echo "<tr><td colspan=2 name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td><td>" . $row->employee_id . "</td>";
+                            echo "<tr><td name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td>";
                             echo '<td><label>Start </label><input type="time" name="mondayStart'.$id.'"
 											><br><label>Finish </label><input type="time" name="mondayEnd'.$id.'"></td>
 										<td><label>Start </label><input type=time name="tuesdayStart'.$id.'"
@@ -141,13 +145,11 @@ $db = getConnection();
 										    ><br><label>Finish </label><input type=time name="saturdayEnd'.$id.'"></td>
 										<td><label>Start </label><input type=time name="sundayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="sundayEnd'.$id.'"></td>
-											<td><label>Holiday</label><input type=checkbox name="isHoliday'.$id.'"></td></tr>';
+											<td><label>Holiday</label><input type=checkbox name="isHoliday'.$id.'" value=1></td></tr>';
                             $value = $value + 1; //increase the value for each row returned
                         }
 						?>
 					</table>
-
-					<input type="submit" value="Publish"/>
 
 					</form>
 					</div>

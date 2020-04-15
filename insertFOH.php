@@ -18,7 +18,17 @@
 		$fridayS = "fridayStart$ID";$fridayE = "fridayEnd$ID";
 		$saturdayS = "saturdayStart$ID";$saturdayE = "saturdayEnd$ID";
 		$sundayS = "sundayStart$ID";$sundayE = "sundayEnd$ID";
-
+		$isHoliday = "isHoliday$ID";
+		
+		//checks if holiday box is checked 
+		if ($holiday = $_POST[$isHoliday])
+		{
+			$holiday = 1;
+		}
+		else {
+			$holiday = 0;
+		}
+			
 		//assigns work week 
 		$workWeek = $_POST['workWeek'];
 		
@@ -30,10 +40,10 @@
 		$mondayEnd = $_POST[$mondayE];$tuesdayEnd = $_POST[$tuesdayE];$wednesdayEnd = $_POST[$wednesdayE];$thursdayEnd = $_POST[$thursdayE];
 		$fridayEnd = $_POST[$fridayE];$saturdayEnd = $_POST[$saturdayE];$sundayEnd = $_POST[$sundayE];
 
-		$sql = "INSERT INTO TPFOHRota(workWeek, MondayStart, TuesdayStart, WednesdayStart, ThursdayStart, FridayStart, SaturdayStart, SundayStart, MondayFinish, TuesdayFinish, WednesdayFinish, ThursdayFinish, FridayFinish, SaturdayFinish, SundayFinish, employee_id)
-		VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO TPFOHRota(workWeek, MondayStart, TuesdayStart, WednesdayStart, ThursdayStart, FridayStart, SaturdayStart, SundayStart, MondayFinish, TuesdayFinish, WednesdayFinish, ThursdayFinish, FridayFinish, SaturdayFinish, SundayFinish, employee_id, isHoliday)
+		VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt= $db->prepare($sql);
-		$stmt->execute([$workWeek, $mondayStart, $tuesdayStart, $wednesdayStart, $thursdayStart,$fridayStart,$saturdayStart,$sundayStart,$mondayEnd,$tuesdayEnd,$wednesdayEnd,$thursdayEnd,$fridayEnd,$saturdayEnd,$sundayEnd,$ID]);
+		$stmt->execute([$workWeek, $mondayStart, $tuesdayStart, $wednesdayStart, $thursdayStart,$fridayStart,$saturdayStart,$sundayStart,$mondayEnd,$tuesdayEnd,$wednesdayEnd,$thursdayEnd,$fridayEnd,$saturdayEnd,$sundayEnd,$ID, $holiday]);
 		header('location:CreateRota.php');
 		}
 
