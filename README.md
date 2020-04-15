@@ -1,6 +1,6 @@
-Northumbria Uni Team Project Management System
-Document Author - Ben Rowell
-System Authors - Ben Rowell, Joseph Kelieff, Nathan Robinson, Alarah Robinson, Andrew Penman
+Northumbria Uni Team Project Management System<br>
+Document Author - Ben Rowell<br>
+System Authors - Ben Rowell, Joseph Kelieff, Nathan Robinson, Alarah Robinson, Andrew Penman<br>
 
 The system is a web based management tool designed to help a local restaurant/bar with their rota creation and management.
 The system starts at the landing page asking the user to log into their account, this account will either have staff or manager permissions and direct the user to the correct page.
