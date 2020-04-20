@@ -52,7 +52,7 @@ $db = getConnection();
 
         <label for="department">Select Department</label><br>
         <select name="department">
-          <option value="Staff">Staff</option>
+          <option value="FOH">Front of House</option>
           <option value="Management">Management</option>
 		  <option value="Kitchen">Kitchen</option>
         </select>
