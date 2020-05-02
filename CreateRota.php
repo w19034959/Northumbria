@@ -24,7 +24,7 @@ $db = getConnection();
 							<li><a href="ManagerMenu.php" >Home</a></li>
 							<li><a href="CreateRota.php" class = "active">Create Rota</a></li>
 							<li><a href="#">Alter Rota</a></li>
-							<li><a href="#">Requests</a></li>
+							<li><a href="requests.php">Requests</a></li>
 							<li><a href="admin.php">Admin</a></li>								<li><a href="logout.php">Log Out</a></li>
 						</ul>
 				</div>
