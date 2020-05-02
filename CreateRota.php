@@ -16,29 +16,31 @@ $db = getConnection();
 		
 		<body>
 				
-					<div class="navigation-bar">
+				<div class="navigation-bar">
 						
-							<img id = "logo" img src="Images/logo.jpg">
+						<img id = "logo" img src="Images/logo.jpg">
 
-							<ul>
-								<li><a href="ManagerMenu.php" >Home</a></li>
-								<li><a href="CreateRota.php" class = "active">Create Rota</a></li>
-								<li><a href="#">Alter Rota</a></li>
-								<li><a href="#">Requests</a></li>
-								<li><a href="admin.php">Admin</a></li>
-								<li><a href="logout.php">Log Out</a></li>
-							</ul>
-					</div>
+						<ul>
+							<li><a href="ManagerMenu.php" >Home</a></li>
+							<li><a href="CreateRota.php" class = "active">Create Rota</a></li>
+							<li><a href="#">Alter Rota</a></li>
+							<li><a href="#">Requests</a></li>
+							<li><a href="admin.php">Admin</a></li>								<li><a href="logout.php">Log Out</a></li>
+						</ul>
+				</div>
 					
-					<div class = "tabs">
+				<div class = "tabs">
 					<button class="tablink" onclick="openPage('FrontOfHouse', this, '#EAAE62')"id="defaultOpen">Front of House</button>
 					
 					<button class="tablink" onclick="openPage('Kitchen', this, '#EAAE62')">Kitchen</button>
-					</div>
-					<div id="FrontOfHouse" class="tabcontent">
-					
+				</div>
+			
+				<div id="FrontOfHouse" class="tabcontent">
+					<!--Creation of tabs for FoH and Kitchen -->
+						
 					<form onsubmit="return confirm('Are you sure you want to publish this rota? All staff members will be published even if incomplete')" 
 						onreset="return confirm('Are you sure you want to clear this rota? All progress will be deleted')" action ="insertFOH.php" method = "post">
+						<!--Confirmation messages upon sumbit/clear press -->
 					<table>
 						<tr>
 							<th colspan="10" id="FoHTitle">Front of House Rota</th>
@@ -66,12 +68,14 @@ $db = getConnection();
 
 						$value = 0;
 
-						while ($row = $result-> fetchObject()) { //creates a start and finish table for each user returned
+						while ($row = $result-> fetchObject()) 
+						{ 
+							//creates a start and finish table for each user returned
 
 						    $id = $row->employee_id;
 
-                            echo "<tr><td name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td>";
-                            echo '<td><label>Start &nbsp</label><input type="time" name="mondayStart'.$id.'"
+                            				echo "<tr><td name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td>";
+                            				echo '<td><label>Start &nbsp</label><input type="time" name="mondayStart'.$id.'"
 											><br><label>Finish </label><input type="time" name="mondayEnd'.$id.'"></td>
 										<td><label>Start &nbsp</label><input type=time name="tuesdayStart'.$id.'"
 											><br><label>Finish </label><input type=time name="tuesdayEnd'.$id.'"></td>
@@ -86,19 +90,20 @@ $db = getConnection();
 										<td><label>Start &nbsp</label><input type=time name="sundayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="sundayEnd'.$id.'"></td>
 											<td><label>Holiday</label><input type=checkbox name="isHoliday'.$id.'" value=1></td></tr>';
-                            $value = $value + 1; //increase the value for each row returned
-                        }
-						?>
+										//table used to create rota for each row in database(staff member)
+                            				$value = $value + 1; //increase the value for each row returned
+                        			}
+					?>
 					</table>
-
 					</form>
-					</div>
+				</div>
 					
 				
 					
-					<div id="Kitchen" class="tabcontent">
+				<div id="Kitchen" class="tabcontent">
 					<form onsubmit="return confirm('Are you sure you want to publish this rota? All staff members will be published even if incomplete')" 
 						onreset="return confirm('Are you sure you want to clear this rota? All progress will be deleted')" action ="insertKitchen.php" method = "post">
+						<!--Confirmation messages upon sumbit/clear press -->
 					<table>
 						<tr>
 							<th colspan="10" id="KitchenTitle">Kitchen Rota</th>
@@ -126,12 +131,14 @@ $db = getConnection();
 
 						$value = 0;
 
-						while ($row = $result-> fetchObject()) { //creates a start and finish table for each user returned
+						while ($row = $result-> fetchObject())
+						{ 
+							//creates a start and finish table for each user returned
 
-						    $id = $row->employee_id;
+						    	$id = $row->employee_id;
 
-                            echo "<tr><td name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td>";
-                            echo '<td><label>Start </label><input type="time" name="mondayStart'.$id.'"
+                            				echo "<tr><td name=" . $row->employee_id . ">" . $row->forename . " " . $row->surname . "</td>";
+                           				echo '<td><label>Start </label><input type="time" name="mondayStart'.$id.'"
 											><br><label>Finish </label><input type="time" name="mondayEnd'.$id.'"></td>
 										<td><label>Start </label><input type=time name="tuesdayStart'.$id.'"
 											><br><label>Finish </label><input type=time name="tuesdayEnd'.$id.'"></td>
@@ -146,41 +153,33 @@ $db = getConnection();
 										<td><label>Start </label><input type=time name="sundayStart'.$id.'"
 										    ><br><label>Finish </label><input type=time name="sundayEnd'.$id.'"></td>
 											<td><label>Holiday</label><input type=checkbox name="isHoliday'.$id.'" value=1></td></tr>';
-                            $value = $value + 1; //increase the value for each row returned
-                        }
-						?>
+							//table used to create rota for each row in database(staff member)
+                            				$value = $value + 1; //increase the value for each row returned
+                       				}
+					?>
 					</table>
-
 					</form>
-					</div>
-					
+				</div>
+				
+				<script>
+				//script used to switch between tabs displaying correct rota
+					function openPage(pageName,elmnt,color) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tabcontent");
+						for (i = 0; i < tabcontent.length; i++) 
+						{
+						tabcontent[i].style.display = "none";
+						}
+						tablinks = document.getElementsByClassName("tablink");
+						for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].style.backgroundColor = "";
+						}
+						document.getElementById(pageName).style.display = "block";
+						elmnt.style.backgroundColor = color;
+						}
 
-					
-					
-					
-					
-					
-					
-					<script>
-							function openPage(pageName,elmnt,color) {
-							var i, tabcontent, tablinks;
-							tabcontent = document.getElementsByClassName("tabcontent");
-								for (i = 0; i < tabcontent.length; i++) {
-								tabcontent[i].style.display = "none";
-							}
-							tablinks = document.getElementsByClassName("tablink");
-							for (i = 0; i < tablinks.length; i++) {
-							tablinks[i].style.backgroundColor = "";
-							}
-							document.getElementById(pageName).style.display = "block";
-							elmnt.style.backgroundColor = color;
-							}
-
-							// Get the element with id="defaultOpen" and click on it
-							document.getElementById("defaultOpen").click();
-
-
-
-</script>
+					// Get the element with id="defaultOpen" and click on it
+					document.getElementById("defaultOpen").click();
+				</script>
 		</body>
 </html> 
