@@ -25,7 +25,7 @@ $db = getConnection();
 								<li><a href="ViewRota.php" class = "active">View Rotas</a></li>
 								<li><a href="RDO.php">Request Day Off</a></li>
 								<li><a href="RH.php">Request Holiday</a></li>
-								<li><a href="LO.php">Log Out</a></li>
+								<li><a href="logout.php">Log Out</a></li>
 							</ul>
 					</div>
 
