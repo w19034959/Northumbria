@@ -15,10 +15,10 @@ $db = getConnection();
 							<img id = "logo" img src="Images/logo.jpg">
 							<ul>
 								<li><a href="#" class = "active">Home</a></li>
-								<li><a href="#">View Rotas</a></li>
-								<li><a href="#">Request Day Off</a></li>
-								<li><a href="#">Request Holiday</a></li>
-								<li><a href="#">Log Out</a></li>
+								<li><a href="ViewRota.php">View Rotas</a></li>
+								<li><a href="RDO.php">Request Day Off</a></li>
+								<li><a href="RH.php">Request Holiday</a></li>
+								<li><a href="logout.php">Log Out</a></li>
 							</ul>
 					</div>
 				</div>
