@@ -18,8 +18,8 @@ $db = getConnection(); //Allows the database connection
 								<li><a href="ManagerMenu.php">Home</a></li>
 								<li><a href="CreateRota.php">Create Rota</a></li>
 								<li><a href="#">Alter Rota</a></li>
-								<li><a href="#">Requests</a></li>
-								<li><a href="#">Admin<class = "active"/a></li>
+								<li><a href="requests.php">Requests</a></li>
+								<li><a href="admin.php">Admin<class = "active"/a></li>
 								<li><a href="logout.php">Log Out</a></li>
 							</ul>
 					</div>
