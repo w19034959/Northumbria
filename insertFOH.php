@@ -40,6 +40,7 @@
 		$mondayEnd = $_POST[$mondayE];$tuesdayEnd = $_POST[$tuesdayE];$wednesdayEnd = $_POST[$wednesdayE];$thursdayEnd = $_POST[$thursdayE];
 		$fridayEnd = $_POST[$fridayE];$saturdayEnd = $_POST[$saturdayE];$sundayEnd = $_POST[$sundayE];
 
+		//insert statement to insert values from rota form into database
 		$sql = "INSERT INTO TPFOHRota(workWeek, MondayStart, TuesdayStart, WednesdayStart, ThursdayStart, FridayStart, SaturdayStart, SundayStart, MondayFinish, TuesdayFinish, WednesdayFinish, ThursdayFinish, FridayFinish, SaturdayFinish, SundayFinish, employee_id, isHoliday)
 		VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt= $db->prepare($sql);
