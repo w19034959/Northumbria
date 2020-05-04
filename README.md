@@ -12,15 +12,15 @@ While various members are within the system a simple manager and staff log in ha
 To access the manager section of the system enter manager in both the username and password fields and select manager from the role dropdown.
 Entering staff in both the email and password fields and selecting staff in the dropdown will provide access to the staff section.
 
-Manager Login 
-email = manager 
-password = manager 
-role = manager
+Manager Login<br>
+email = manager<br>
+password = manager<br> 
+role = manager<br>
 
-Staff Login
-email = staff
-password = staff
-role = staff 
+Staff Login<br>
+email = staff<br>
+password = staff<br>
+role = staff <br>
 
 Github URL = https://github.com/w19034959/Northumbria <br>
 System URL = http://unn-w19032995.newnumyspace.co.uk/TeamProject/LandingPage.php
