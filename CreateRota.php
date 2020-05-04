@@ -46,7 +46,7 @@ $db = getConnection();
 							<th colspan="10" id="FoHTitle">Front of House Rota</th>
 						</tr>
 						<tr>
-							<th colspan="6" id="date"><label>Please select the week you would like to rota: </label><input type = "date" name="workWeek"></th>
+							<th colspan="6" id="date"><label>Please select the week you would like to rota: </label><input type = "date" required = "required" name="workWeek"></th>
 							<th colspan="4" id="FoHPublish"><input type="submit" value="Publish"/><input type="reset" value="Clear"/></th>
 						</tr>
 						<tr>
