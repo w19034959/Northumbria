@@ -19,7 +19,7 @@ $db = getConnection(); //Allows the database connection
 								<li><a href="CreateRota.php">Create Rota</a></li>
 								<li><a href="#">Alter Rota</a></li>
 								<li><a href="requests.php">Requests</a></li>
-								<li><a href="admin.php">Admin<class = "active"/a></li>
+								<li><a href="admin.php" class = "active">Admin</a></li>
 								<li><a href="logout.php">Log Out</a></li>
 							</ul>
 					</div>
@@ -59,17 +59,12 @@ $db = getConnection(); //Allows the database connection
 		      <option value="Kitchen">Kitchen</option>
         </select>
 
-          <!-- This will allow management to correctly identify which memebt of staff will have permissions within the system -->
+          <!-- This will allow management to correctly identify which member of staff will have permissions within the system -->
 		<label for="permissions">Select Permissions</label><br>
         <select name="permissions">
           <option value="Staff">Staff</option>
           <option value="Management">Management</option>
         </select>
-
-            <!-- This should allow the user to be remembered on their specific device when logging in once the box is checked -->
-        <label><br><br>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
-        </label>
 
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
@@ -83,3 +78,4 @@ $db = getConnection(); //Allows the database connection
 </form>
 		</body>
 </html>
+
