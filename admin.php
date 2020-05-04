@@ -54,7 +54,7 @@ $db = getConnection(); //Allows the database connection
           <!-- This code will allow management to designate each member of staff to a department   -->
         <label for="department">Select Department</label><br>
         <select name="department">
-          <option value="Staff">Staff</option>
+          <option value="FOH">FoH</option>
           <option value="Management">Management</option>
 		      <option value="Kitchen">Kitchen</option>
         </select>
